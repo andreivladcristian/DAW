@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tabeladmin">
+    <Key>
+      <PropertyRef Name="ad_id" />
+    </Key>
+    <Property Name="ad_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad_username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ad_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tabelcategories" Relationship="Self.FK__tabelcate__cat_f__2B3F6F97" FromRole="tabeladmin" ToRole="tabelcategory" />
+  </EntityType>
+  <EntityType Name="tabelcategory">
+    <Key>
+      <PropertyRef Name="cat_id" />
+    </Key>
+    <Property Name="cat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cat_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cat_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cat_fk_ad" Type="Int32" />
+    <NavigationProperty Name="tabeladmin" Relationship="Self.FK__tabelcate__cat_f__2B3F6F97" FromRole="tabelcategory" ToRole="tabeladmin" />
+    <NavigationProperty Name="tabelproducts" Relationship="Self.FK__tabelprod__pro_f__2F10007B" FromRole="tabelcategory" ToRole="tabelproduct" />
+  </EntityType>
+  <EntityType Name="tabelproduct">
+    <Key>
+      <PropertyRef Name="pro_id" />
+    </Key>
+    <Property Name="pro_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pro_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pro_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pro_price" Type="Int32" />
+    <Property Name="pro_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pro_fk_cat" Type="Int32" />
+    <Property Name="pro_fk_user" Type="Int32" />
+    <NavigationProperty Name="tabelcategory" Relationship="Self.FK__tabelprod__pro_f__2F10007B" FromRole="tabelproduct" ToRole="tabelcategory" />
+    <NavigationProperty Name="tabeluser" Relationship="Self.FK__tabelprod__pro_f__300424B4" FromRole="tabelproduct" ToRole="tabeluser" />
+  </EntityType>
+  <EntityType Name="tabeluser">
+    <Key>
+      <PropertyRef Name="u_id" />
+    </Key>
+    <Property Name="u_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="u_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="u_contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tabelproducts" Relationship="Self.FK__tabelprod__pro_f__300424B4" FromRole="tabeluser" ToRole="tabelproduct" />
+  </EntityType>
+  <Association Name="FK__tabelcate__cat_f__2B3F6F97">
+    <End Role="tabeladmin" Type="Self.tabeladmin" Multiplicity="0..1" />
+    <End Role="tabelcategory" Type="Self.tabelcategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tabeladmin">
+        <PropertyRef Name="ad_id" />
+      </Principal>
+      <Dependent Role="tabelcategory">
+        <PropertyRef Name="cat_fk_ad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tabelprod__pro_f__2F10007B">
+    <End Role="tabelcategory" Type="Self.tabelcategory" Multiplicity="0..1" />
+    <End Role="tabelproduct" Type="Self.tabelproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tabelcategory">
+        <PropertyRef Name="cat_id" />
+      </Principal>
+      <Dependent Role="tabelproduct">
+        <PropertyRef Name="pro_fk_cat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tabelprod__pro_f__300424B4">
+    <End Role="tabeluser" Type="Self.tabeluser" Multiplicity="0..1" />
+    <End Role="tabelproduct" Type="Self.tabelproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tabeluser">
+        <PropertyRef Name="u_id" />
+      </Principal>
+      <Dependent Role="tabelproduct">
+        <PropertyRef Name="pro_fk_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tabeladmins" EntityType="Self.tabeladmin" />
+    <EntitySet Name="tabelcategories" EntityType="Self.tabelcategory" />
+    <EntitySet Name="tabelproducts" EntityType="Self.tabelproduct" />
+    <EntitySet Name="tabelusers" EntityType="Self.tabeluser" />
+    <AssociationSet Name="FK__tabelcate__cat_f__2B3F6F97" Association="Self.FK__tabelcate__cat_f__2B3F6F97">
+      <End Role="tabeladmin" EntitySet="tabeladmins" />
+      <End Role="tabelcategory" EntitySet="tabelcategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tabelprod__pro_f__2F10007B" Association="Self.FK__tabelprod__pro_f__2F10007B">
+      <End Role="tabelcategory" EntitySet="tabelcategories" />
+      <End Role="tabelproduct" EntitySet="tabelproducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tabelprod__pro_f__300424B4" Association="Self.FK__tabelprod__pro_f__300424B4">
+      <End Role="tabeluser" EntitySet="tabelusers" />
+      <End Role="tabelproduct" EntitySet="tabelproducts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,165 @@
+C:\Users\Dan\source\repos\SITE\SITE\bin\SITE.dll.config
+C:\Users\Dan\source\repos\SITE\SITE\bin\SITE.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\SITE.pdb
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\csc.exe
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\csc.exe.config
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\csc.rsp
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\csi.exe
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\csi.exe.config
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\csi.rsp
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.AppContext.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Console.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Security.Claims.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\vbc.exe
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\vbc.exe.config
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\vbc.rsp
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dan\source\repos\SITE\SITE\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dan\source\repos\SITE\SITE\bin\Antlr3.Runtime.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\EntityFramework.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\EntityFramework.SqlServer.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\Newtonsoft.Json.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.Helpers.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.Mvc.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.Optimization.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.Razor.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.WebPages.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\WebGrease.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\EntityFramework.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\EntityFramework.SqlServer.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.Helpers.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.Mvc.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.Optimization.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.Razor.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.WebPages.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\Newtonsoft.Json.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\Antlr3.Runtime.pdb
+C:\Users\Dan\source\repos\SITE\SITE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dan\source\repos\SITE\SITE\obj\Debug\SITE.csproj.CopyComplete
+C:\Users\Dan\source\repos\SITE\SITE\obj\Debug\SITE.dll
+C:\Users\Dan\source\repos\SITE\SITE\obj\Debug\SITE.pdb
+C:\Users\Dan\source\repos\SITE\SITE\bin\PagedList.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\PagedList.Mvc.dll
+C:\Users\Dan\source\repos\SITE\SITE\bin\PagedList.xml
+C:\Users\Dan\source\repos\SITE\SITE\bin\PagedList.Mvc.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\SITE.dll.config
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\SITE.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\SITE.pdb
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\csc.exe
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\csc.exe.config
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\csc.rsp
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\csi.exe
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\csi.exe.config
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\csi.rsp
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.AppContext.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Console.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.IO.Compression.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Security.Claims.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.ValueTuple.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\vbc.exe
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\vbc.exe.config
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\vbc.rsp
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\Antlr3.Runtime.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\EntityFramework.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\EntityFramework.SqlServer.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\Newtonsoft.Json.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\PagedList.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\PagedList.Mvc.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.Helpers.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.Mvc.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.Optimization.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.Razor.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.WebPages.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\WebGrease.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\EntityFramework.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\EntityFramework.SqlServer.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\PagedList.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\PagedList.Mvc.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.Helpers.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.Mvc.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.Optimization.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.Razor.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.WebPages.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\Newtonsoft.Json.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\Antlr3.Runtime.pdb
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\obj\Debug\SITE.csprojAssemblyReference.cache
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\obj\Debug\SITE.csproj.CopyComplete
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\obj\Debug\SITE.dll
+C:\Users\Vlad-Cristian Andrei\Downloads\ProiectDAW\SITE\obj\Debug\SITE.pdb

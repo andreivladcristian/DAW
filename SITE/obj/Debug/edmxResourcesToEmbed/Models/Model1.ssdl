@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tabeladmin">
+    <Key>
+      <PropertyRef Name="ad_id" />
+    </Key>
+    <Property Name="ad_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad_username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ad_password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tabelcategory">
+    <Key>
+      <PropertyRef Name="cat_id" />
+    </Key>
+    <Property Name="cat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cat_image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="cat_fk_ad" Type="int" />
+  </EntityType>
+  <EntityType Name="tabelproduct">
+    <Key>
+      <PropertyRef Name="pro_id" />
+    </Key>
+    <Property Name="pro_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pro_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="pro_image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pro_price" Type="int" />
+    <Property Name="pro_des" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="pro_fk_cat" Type="int" />
+    <Property Name="pro_fk_user" Type="int" />
+  </EntityType>
+  <EntityType Name="tabeluser">
+    <Key>
+      <PropertyRef Name="u_id" />
+    </Key>
+    <Property Name="u_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="u_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="u_email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="u_password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="u_image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="u_contact" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__tabelcate__cat_f__2B3F6F97">
+    <End Role="tabeladmin" Type="Self.tabeladmin" Multiplicity="0..1" />
+    <End Role="tabelcategory" Type="Self.tabelcategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tabeladmin">
+        <PropertyRef Name="ad_id" />
+      </Principal>
+      <Dependent Role="tabelcategory">
+        <PropertyRef Name="cat_fk_ad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tabelprod__pro_f__2F10007B">
+    <End Role="tabelcategory" Type="Self.tabelcategory" Multiplicity="0..1" />
+    <End Role="tabelproduct" Type="Self.tabelproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tabelcategory">
+        <PropertyRef Name="cat_id" />
+      </Principal>
+      <Dependent Role="tabelproduct">
+        <PropertyRef Name="pro_fk_cat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tabelprod__pro_f__300424B4">
+    <End Role="tabeluser" Type="Self.tabeluser" Multiplicity="0..1" />
+    <End Role="tabelproduct" Type="Self.tabelproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tabeluser">
+        <PropertyRef Name="u_id" />
+      </Principal>
+      <Dependent Role="tabelproduct">
+        <PropertyRef Name="pro_fk_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="tabeladmin" EntityType="Self.tabeladmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tabelcategory" EntityType="Self.tabelcategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tabelproduct" EntityType="Self.tabelproduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tabeluser" EntityType="Self.tabeluser" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__tabelcate__cat_f__2B3F6F97" Association="Self.FK__tabelcate__cat_f__2B3F6F97">
+      <End Role="tabeladmin" EntitySet="tabeladmin" />
+      <End Role="tabelcategory" EntitySet="tabelcategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tabelprod__pro_f__2F10007B" Association="Self.FK__tabelprod__pro_f__2F10007B">
+      <End Role="tabelcategory" EntitySet="tabelcategory" />
+      <End Role="tabelproduct" EntitySet="tabelproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tabelprod__pro_f__300424B4" Association="Self.FK__tabelprod__pro_f__300424B4">
+      <End Role="tabeluser" EntitySet="tabeluser" />
+      <End Role="tabelproduct" EntitySet="tabelproduct" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

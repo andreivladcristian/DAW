@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tabeladmin">
+          <Key>
+            <PropertyRef Name="ad_id" />
+          </Key>
+          <Property Name="ad_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad_username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ad_password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tabelcategory">
+          <Key>
+            <PropertyRef Name="cat_id" />
+          </Key>
+          <Property Name="cat_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cat_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="cat_image" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="cat_fk_ad" Type="int" />
+        </EntityType>
+        <EntityType Name="tabelproduct">
+          <Key>
+            <PropertyRef Name="pro_id" />
+          </Key>
+          <Property Name="pro_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pro_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="pro_image" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pro_price" Type="int" />
+          <Property Name="pro_des" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="pro_fk_cat" Type="int" />
+          <Property Name="pro_fk_user" Type="int" />
+        </EntityType>
+        <EntityType Name="tabeluser">
+          <Key>
+            <PropertyRef Name="u_id" />
+          </Key>
+          <Property Name="u_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="u_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="u_email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="u_password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="u_image" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="u_contact" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__tabelcate__cat_f__2B3F6F97">
+          <End Role="tabeladmin" Type="Self.tabeladmin" Multiplicity="0..1" />
+          <End Role="tabelcategory" Type="Self.tabelcategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tabeladmin">
+              <PropertyRef Name="ad_id" />
+            </Principal>
+            <Dependent Role="tabelcategory">
+              <PropertyRef Name="cat_fk_ad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tabelprod__pro_f__2F10007B">
+          <End Role="tabelcategory" Type="Self.tabelcategory" Multiplicity="0..1" />
+          <End Role="tabelproduct" Type="Self.tabelproduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tabelcategory">
+              <PropertyRef Name="cat_id" />
+            </Principal>
+            <Dependent Role="tabelproduct">
+              <PropertyRef Name="pro_fk_cat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tabelprod__pro_f__300424B4">
+          <End Role="tabeluser" Type="Self.tabeluser" Multiplicity="0..1" />
+          <End Role="tabelproduct" Type="Self.tabelproduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tabeluser">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tabelproduct">
+              <PropertyRef Name="pro_fk_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="tabeladmin" EntityType="Self.tabeladmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tabelcategory" EntityType="Self.tabelcategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tabelproduct" EntityType="Self.tabelproduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tabeluser" EntityType="Self.tabeluser" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__tabelcate__cat_f__2B3F6F97" Association="Self.FK__tabelcate__cat_f__2B3F6F97">
+            <End Role="tabeladmin" EntitySet="tabeladmin" />
+            <End Role="tabelcategory" EntitySet="tabelcategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tabelprod__pro_f__2F10007B" Association="Self.FK__tabelprod__pro_f__2F10007B">
+            <End Role="tabelcategory" EntitySet="tabelcategory" />
+            <End Role="tabelproduct" EntitySet="tabelproduct" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tabelprod__pro_f__300424B4" Association="Self.FK__tabelprod__pro_f__300424B4">
+            <End Role="tabeluser" EntitySet="tabeluser" />
+            <End Role="tabelproduct" EntitySet="tabelproduct" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tabeladmin">
+          <Key>
+            <PropertyRef Name="ad_id" />
+          </Key>
+          <Property Name="ad_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad_username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ad_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="tabelcategories" Relationship="Self.FK__tabelcate__cat_f__2B3F6F97" FromRole="tabeladmin" ToRole="tabelcategory" />
+        </EntityType>
+        <EntityType Name="tabelcategory">
+          <Key>
+            <PropertyRef Name="cat_id" />
+          </Key>
+          <Property Name="cat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cat_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cat_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cat_fk_ad" Type="Int32" />
+          <NavigationProperty Name="tabeladmin" Relationship="Self.FK__tabelcate__cat_f__2B3F6F97" FromRole="tabelcategory" ToRole="tabeladmin" />
+          <NavigationProperty Name="tabelproducts" Relationship="Self.FK__tabelprod__pro_f__2F10007B" FromRole="tabelcategory" ToRole="tabelproduct" />
+        </EntityType>
+        <EntityType Name="tabelproduct">
+          <Key>
+            <PropertyRef Name="pro_id" />
+          </Key>
+          <Property Name="pro_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pro_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pro_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pro_price" Type="Int32" />
+          <Property Name="pro_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pro_fk_cat" Type="Int32" />
+          <Property Name="pro_fk_user" Type="Int32" />
+          <NavigationProperty Name="tabelcategory" Relationship="Self.FK__tabelprod__pro_f__2F10007B" FromRole="tabelproduct" ToRole="tabelcategory" />
+          <NavigationProperty Name="tabeluser" Relationship="Self.FK__tabelprod__pro_f__300424B4" FromRole="tabelproduct" ToRole="tabeluser" />
+        </EntityType>
+        <EntityType Name="tabeluser">
+          <Key>
+            <PropertyRef Name="u_id" />
+          </Key>
+          <Property Name="u_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="u_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="u_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="u_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="u_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="u_contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="tabelproducts" Relationship="Self.FK__tabelprod__pro_f__300424B4" FromRole="tabeluser" ToRole="tabelproduct" />
+        </EntityType>
+        <Association Name="FK__tabelcate__cat_f__2B3F6F97">
+          <End Role="tabeladmin" Type="Self.tabeladmin" Multiplicity="0..1" />
+          <End Role="tabelcategory" Type="Self.tabelcategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tabeladmin">
+              <PropertyRef Name="ad_id" />
+            </Principal>
+            <Dependent Role="tabelcategory">
+              <PropertyRef Name="cat_fk_ad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tabelprod__pro_f__2F10007B">
+          <End Role="tabelcategory" Type="Self.tabelcategory" Multiplicity="0..1" />
+          <End Role="tabelproduct" Type="Self.tabelproduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tabelcategory">
+              <PropertyRef Name="cat_id" />
+            </Principal>
+            <Dependent Role="tabelproduct">
+              <PropertyRef Name="pro_fk_cat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tabelprod__pro_f__300424B4">
+          <End Role="tabeluser" Type="Self.tabeluser" Multiplicity="0..1" />
+          <End Role="tabelproduct" Type="Self.tabelproduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tabeluser">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tabelproduct">
+              <PropertyRef Name="pro_fk_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tabeladmins" EntityType="Self.tabeladmin" />
+          <EntitySet Name="tabelcategories" EntityType="Self.tabelcategory" />
+          <EntitySet Name="tabelproducts" EntityType="Self.tabelproduct" />
+          <EntitySet Name="tabelusers" EntityType="Self.tabeluser" />
+          <AssociationSet Name="FK__tabelcate__cat_f__2B3F6F97" Association="Self.FK__tabelcate__cat_f__2B3F6F97">
+            <End Role="tabeladmin" EntitySet="tabeladmins" />
+            <End Role="tabelcategory" EntitySet="tabelcategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tabelprod__pro_f__2F10007B" Association="Self.FK__tabelprod__pro_f__2F10007B">
+            <End Role="tabelcategory" EntitySet="tabelcategories" />
+            <End Role="tabelproduct" EntitySet="tabelproducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tabelprod__pro_f__300424B4" Association="Self.FK__tabelprod__pro_f__300424B4">
+            <End Role="tabeluser" EntitySet="tabelusers" />
+            <End Role="tabelproduct" EntitySet="tabelproducts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="tabeladmins">
+            <EntityTypeMapping TypeName="Database1Model.tabeladmin">
+              <MappingFragment StoreEntitySet="tabeladmin">
+                <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+                <ScalarProperty Name="ad_username" ColumnName="ad_username" />
+                <ScalarProperty Name="ad_password" ColumnName="ad_password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tabelcategories">
+            <EntityTypeMapping TypeName="Database1Model.tabelcategory">
+              <MappingFragment StoreEntitySet="tabelcategory">
+                <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+                <ScalarProperty Name="cat_name" ColumnName="cat_name" />
+                <ScalarProperty Name="cat_image" ColumnName="cat_image" />
+                <ScalarProperty Name="cat_fk_ad" ColumnName="cat_fk_ad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tabelproducts">
+            <EntityTypeMapping TypeName="Database1Model.tabelproduct">
+              <MappingFragment StoreEntitySet="tabelproduct">
+                <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+                <ScalarProperty Name="pro_name" ColumnName="pro_name" />
+                <ScalarProperty Name="pro_image" ColumnName="pro_image" />
+                <ScalarProperty Name="pro_price" ColumnName="pro_price" />
+                <ScalarProperty Name="pro_des" ColumnName="pro_des" />
+                <ScalarProperty Name="pro_fk_cat" ColumnName="pro_fk_cat" />
+                <ScalarProperty Name="pro_fk_user" ColumnName="pro_fk_user" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tabelusers">
+            <EntityTypeMapping TypeName="Database1Model.tabeluser">
+              <MappingFragment StoreEntitySet="tabeluser">
+                <ScalarProperty Name="u_id" ColumnName="u_id" />
+                <ScalarProperty Name="u_name" ColumnName="u_name" />
+                <ScalarProperty Name="u_email" ColumnName="u_email" />
+                <ScalarProperty Name="u_password" ColumnName="u_password" />
+                <ScalarProperty Name="u_image" ColumnName="u_image" />
+                <ScalarProperty Name="u_contact" ColumnName="u_contact" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
